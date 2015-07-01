@@ -16,9 +16,11 @@
   <div>
     <img ng-src="{{image1}}" ng-show="image1">
     <img ng-src="{{image2}}" ng-show="image2">
+    <button ng-show="image2"
+            ng-click="fight()">FIGHT!</button>
   </div>
 
-  <span ng-repeat="p in pokemon">
+  <span ng-repeat="p in pokemon" ng-if="p.name.text">
     <a ng-href="#{{p.name.text}}"
        ng-click="iChooseYou(p)"> {{ p.name.text }} </a>
   </span>

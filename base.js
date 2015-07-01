@@ -12,4 +12,8 @@ app.controller('PokemonCtrl', function($scope) {
     }
   }
 
+  $scope.fight = function(){
+    $scope.image2 = null;
+  }
+
 });
