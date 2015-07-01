@@ -8,7 +8,7 @@
 
 ###Instructions:
 
-* **Make sure to `bundle install`.**
+* **Make sure to `bower install`.**
 * For the moment, our pokemon data lives in `mock_data.js`.
 * Can you render all the pokemon names?
 * Can you attach an event listener to each name?
