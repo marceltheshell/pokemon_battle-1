@@ -11,10 +11,16 @@
 </head>
 <body ng-controller="PokemonCtrl">
 
-  <img ng-src="{{image_src}}">
+  <h3 ng-hide="image1">CHOOSE YOUR POKEMON!</h3>
+
+  <div>
+    <img ng-src="{{image1}}" ng-show="image1">
+    <img ng-src="{{image2}}" ng-show="image2">
+  </div>
+
   <span ng-repeat="p in pokemon">
     <a ng-href="#{{p.name.text}}"
-       ng-click="iChooseYou(p.image.href)"> {{ p.name.text }} </a>
+       ng-click="iChooseYou(p)"> {{ p.name.text }} </a>
   </span>
 
 </body>
