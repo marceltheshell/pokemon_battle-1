@@ -11,7 +11,10 @@
 </head>
 <body ng-controller="PokemonCtrl">
 
-    <a ng-repeat="p in pokemon">{{p.name.text}}</a>
-
+  <img ng-src="{{image_src}}">
+  <span ng-repeat="p in pokemon">
+    <a ng-href="#{{p.name.text}}"
+       ng-click="setImage(p.image.href)"> {{ p.name.text }} </a>
+  </span>
 </body>
 </html>
