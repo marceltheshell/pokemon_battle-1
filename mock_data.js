@@ -1,6 +1,6 @@
 // EXAMPLE API RESPONSE
 // Set as a global variable for convenience / development.
-// ENDPOINT: https://www.kimonolabs.com/api/74dfm89w?apikey=Zgn83shuWLFhlB7k5n4arKz3Z18Z5lvr
+// DO NOT COPY PASTE! Just use the global variable!
 
 var res = {
     "name": "pokemons",
