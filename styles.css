@@ -24,3 +24,7 @@ a:hover {
 button {
   width: 25%;
 }
+
+.row {
+	display: inline;
+}

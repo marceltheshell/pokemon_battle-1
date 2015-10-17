@@ -4,12 +4,26 @@
   <meta charset="utf-8">
   <title>Pokemon Battle!</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular-resource.min.js"></script>
+
   <script type="text/javascript" src="bower_components/angular/angular.js"></script>
   <script type="text/javascript" src="mock_data.js"></script>
   <script type="text/javascript" src="app.js"></script>
 </head>
 <body ng-controller="PokemonCtrl">
-
+	<div class="container">
+		<div>
+			<h3><strong>Choose your Fighter!</strong></h3>
+		</div>
+		<div> 
+			<span ng-show="battle[0]"></span> vs. <span ng-show="battle[1]"></span>
+		</div>
+		<div ng-repeat="poke in pokes" class="row">
+			<a href="#" ng-click="chooseFighter">{{poke.name.text}}</a> 
+		</div>
+	</div>
+</body>
 </body>
 </html>
