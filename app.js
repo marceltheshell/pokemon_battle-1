@@ -6,18 +6,20 @@ app.controller('PokemonCtrl', function($scope, PokeDeck) {
 	$scope.pokes = PokeDeck.query(); 
 
 	$scope.iChooseYou = function (poke) {
-		$scope.battle.push(poke) 
-	} 
-	
+		if ($scope.battle[0]) {
+			$scope.battle[1] = poke; 
+	 	}
+		else {
+			($scope.battle[0] = poke)
+		}
+	};
 
-	// $scope.chooseFighter = function chooseFighter() {
-	// 	if ($scope.battle[0]) {
-	// 		$scope.battle.push(poke)
-	// 	} 
-	// 	else {
-	// 		$scope.battle.push(poke)
-	// 	}
-	// }
+	$scope.pickWinner = function () {
+		var winner_idx = Math.floor(Math.random() * 2);
+		console.log(winner_idx)
+		$scope.battle = $scope.battle.splice(winner_idx, 1)
+		$scope.winner = $scope.battle[0].name.text;
+	};
 })
 
 app.factory('PokeDeck', function(){

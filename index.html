@@ -14,11 +14,22 @@
 <body ng-controller="PokemonCtrl">
 	<div class="container">
 		<div id="header">
-			<h3><strong>Choose your Fighter!</strong></h3>
+			<h3 ng-hide="battle.length"><strong>Choose your Fighter!</strong></h3>
+		</div>
+		<div>
+			<h3 >{{winner}} WINS!</h3>
 		</div>
 		<div id="arena">
-			<img ng-show="battle[0]" ng-src="{{battle[0].image.src}}" >
+			<img ng-show="battle[0]" ng-src="{{battle[0].image.href}}" >
+			<span ng-show='battle[1]' class="vs"> vs. </span>
+			<img ng-show="battle[1]" ng-src="{{battle[1].image.href}}" >
 		</div>
+
+		<div>
+			<button ng-show="battle[1]" ng-click="pickWinner()" > Fight!  
+			</button>
+		</div>
+
 		<div ng-repeat="poke in pokes" class="row">
 			<a ng-click="iChooseYou(poke)" href="#">{{poke.name.text}}</a>
 		</div>
