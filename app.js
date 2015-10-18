@@ -1,7 +1,13 @@
 var app = angular.module('pokemonApp', []);
 
 app.controller('PokemonCtrl', function($scope, PokeDeck) {
+	$scope.battle = []
+
 	$scope.pokes = PokeDeck.query(); 
+
+	$scope.iChooseYou = function (poke) {
+		$scope.battle.push(poke) 
+	} 
 	
 
 	// $scope.chooseFighter = function chooseFighter() {
@@ -18,7 +24,7 @@ app.factory('PokeDeck', function(){
   var PokeDeck = {};
 
   PokeDeck.query = function(){
-    return pokemonArray;
+    return pokemonArray.results.collection1;
   }
 
   // WineService.get = function(id){

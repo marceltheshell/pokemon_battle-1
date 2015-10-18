@@ -13,11 +13,14 @@
 </head>
 <body ng-controller="PokemonCtrl">
 	<div class="container">
-		<div>
+		<div id="header">
 			<h3><strong>Choose your Fighter!</strong></h3>
 		</div>
-		<div>
-			<a href="#">{{pokes}}</a>
+		<div id="arena">
+			<img ng-show="battle[0]" ng-src="{{battle[0].image.src}}" >
+		</div>
+		<div ng-repeat="poke in pokes" class="row">
+			<a ng-click="iChooseYou(poke)" href="#">{{poke.name.text}}</a>
 		</div>
 	</div>
 </body>
