@@ -2,7 +2,7 @@
 // Set as a global variable for convenience / development.
 // DO NOT COPY PASTE! Just use the global variable!
 
-var res = {
+var pokemonArray = {
     "name": "pokemons",
     "count": 735,
     "frequency": "Manual Crawl",
